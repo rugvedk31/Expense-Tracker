@@ -5,7 +5,8 @@ import cors from 'cors';
 import connectDB from './database/db.js';
 
 import { register } from "./controllers/user.controller.js"; // register controller
-import { login } from "./controllers/user.controller.js"; // register controller
+import { login } from "./controllers/user.controller.js"; // login controller
+import { logout } from "./controllers/user.controller.js"; // logout controller
 
 dotenv.config();
 
@@ -42,3 +43,6 @@ app.post("/api/register", register);
 
 // test route for login
 app.post("/api/login",login);
+
+// test route for logout
+app.post("/api/logout",logout);
