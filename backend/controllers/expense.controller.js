@@ -89,7 +89,7 @@ export const markAsDoneOrUndone = async (req, res) =>{
             });
         }
         return res.status(200).json({
-            message : `Expense mark as ${expnese.done ? 'done' : 'undone'}.` ,
+            message : `Expense mark as ${expense.done ? 'done' : 'undone'}.` ,
             success : true
         })
     } catch (error) {
