@@ -40,18 +40,18 @@ export const getAllExpenses = async (req, res)=>{
         const query = {
             userId  // filter by userId
         }
-         if(category.toLowercase() === "all")
+         if(category.toLowerCase() === "all")
          {
             // no need to filter by category
          }
          else{
             query.category = {$regex:category,$options:'i'};
          }
-         if(done.toLowercase() === "done")
+         if(done.toLowerCase() === "done")
          {
             query.done = true;
          }
-         else if(done.toLowercase() === "undone")
+         else if(done.toLowerCase() === "undone")
          {
             query.done = false  //filter for expense mark as a pending
          };
